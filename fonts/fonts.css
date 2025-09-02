@@ -1,17 +1,11 @@
 @font-face {
   font-family: "Inter";
-  src: url("./Inter-Variable.woff2") format("woff2-variations");
+  src: url("./Inter-Variable.woff2") format("woff2-variations") format("woff2 supports variations");
   font-display: swap;
   font-weight: 400 785;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("./Inter-Variable.woff2") format("woff2-variations");
   font-display: swap;
-  font-weight: 715;
-  font-style: normal;
+  font-variation-settings:"wght" 715;;
 }
 
 @font-face {
