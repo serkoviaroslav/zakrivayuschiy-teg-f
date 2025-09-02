@@ -1,0 +1,37 @@
+/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+*/
+@keyframes fillHeart {
+0% { fill: transparent; }
+25% { fill: var(--animation-fill-color); }
+60% { fill: var(--animation-fill-color); }
+100% { fill: var(--animation-fill-color); }
+}
+
+@keyframes fillHeartHover {
+0% { fill: var(--accent-color); }
+25% { fill: var(--accent-color); }
+60% { fill: var(--accent-color); }
+100% { fill: var(--accent-color); }
+}
+
+
+@keyframes heart-bump {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+@keyframes sparks-flash {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}
