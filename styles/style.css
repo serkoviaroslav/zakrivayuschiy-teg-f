@@ -23,8 +23,6 @@
   margin: 100px auto 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 100%;
   font-family: var(--font-accent);
   height: clamp(200px, 33%, 756px);
   align-items: center;
@@ -83,7 +81,6 @@
   background-color: white;
   margin-bottom: 50px;
 }
-
 
 .timeline__item:last-child {
   margin-bottom: 0;
@@ -199,7 +196,6 @@
   color: #ffffff;
 }
 
-
 .card__like-button:focus {
   box-shadow: 2px 2px 0 var(--accent-color, #ff0000);
 }
@@ -279,7 +275,6 @@
   width: 23.26%;
   margin: 50px auto 0 auto;
   display: flex;
-  align-items: center;
   flex-direction: row;
   gap: 3%;
   align-items: center;
@@ -303,11 +298,6 @@
 
 .card__save-button:hover::before {
   transform: translateX(100%);
-}
-
-.floppy-button {
-  mix-blend-mode: difference;
-  color: #ffffff;
 }
 
 .card__save-button:focus {
@@ -422,7 +412,6 @@ dialog#myDialog::backdrop {
   width: 39px;
   shape-rendering: crispEdges;
   margin-top: 4%;
-  
 }
 
 .floppy-button {
@@ -430,6 +419,8 @@ dialog#myDialog::backdrop {
   flex-shrink: 0;
   width: 21px;
   shape-rendering: crispEdges;
+  mix-blend-mode: difference;
+  color: #ffffff;
 }
 
 .like-icon .core,
@@ -530,7 +521,6 @@ dialog#myDialog::backdrop {
   opacity: 1;
 }
 
-
 @media (width <= 376px) {
   .header-title {
     margin-top: 32%;
@@ -595,10 +585,10 @@ dialog#myDialog::backdrop {
     max-height: 191px;
     max-width: 341px;
     width: 90.51%;
-    justify-content:center;
+    justify-content: center;
     gap: 15%;
   }
-  .dialog__close-button{
+  .dialog__close-button {
     width: 83.5%;
     height: 21.15%;
     margin-left: auto;

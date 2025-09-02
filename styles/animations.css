@@ -10,28 +10,55 @@
 
 */
 @keyframes fillHeart {
-0% { fill: transparent; }
-25% { fill: var(--animation-fill-color); }
-60% { fill: var(--animation-fill-color); }
-100% { fill: var(--animation-fill-color); }
+  0% {
+    fill: transparent;
+  }
+  25% {
+    fill: var(--animation-fill-color);
+  }
+  60% {
+    fill: var(--animation-fill-color);
+  }
+  100% {
+    fill: var(--animation-fill-color);
+  }
 }
 
 @keyframes fillHeartHover {
-0% { fill: var(--accent-color); }
-25% { fill: var(--accent-color); }
-60% { fill: var(--accent-color); }
-100% { fill: var(--accent-color); }
+  0% {
+    fill: var(--accent-color);
+  }
+  25% {
+    fill: var(--accent-color);
+  }
+  60% {
+    fill: var(--accent-color);
+  }
+  100% {
+    fill: var(--accent-color);
+  }
 }
 
-
 @keyframes heart-bump {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.25); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes sparks-flash {
-  0%   { opacity: 0; }
-  50%  { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
