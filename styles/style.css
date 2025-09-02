@@ -127,7 +127,7 @@
 
 .main-content-text {
   font-family: var(--font-main);
-  font-weight: 410;
+  font-variation-settings: "wght" 410;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0%;
@@ -146,7 +146,7 @@
 .button__text {
   display: inline-block;
   font-family: var(--font-accent);
-  font-weight: 400;
+  font-variation-settings: "wght" 400;
   font-size: 14px;
   line-height: 90%;
   letter-spacing: 0%;
@@ -230,7 +230,7 @@
   mix-blend-mode: hard-light;
   color: rgba(0, 0, 0, 1);
   font-family: var(--font-accent);
-  font-weight: 400;
+  font-variation-settings: "wght" 400;
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -276,7 +276,7 @@
 
 .save-button__text {
   font-family: var(--font-accent);
-  font-weight: 400;
+  font-variation-settings: "wght" 400;
   font-size: 14px;
   line-height: 90%;
   letter-spacing: 0%;
@@ -322,7 +322,7 @@ dialog#myDialog::backdrop {
 
 .dialog-text {
   font-family: var(--font-accent);
-  font-weight: 400;
+  font-variation-settings: "wght" 400;
   font-size: 14px;
   line-height: 150%;
   letter-spacing: 0%;
