@@ -24,7 +24,7 @@
   display: flex;
   justify-content: space-between;
   font-family: var(--font-accent);
-  height: clamp(200px, 33%, 756px);
+  height: auto;
   align-items: center;
   border-inline-start: 2px solid #000;
   border-inline-end: 2px solid #000;
@@ -69,7 +69,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow-x: hidden;
 }
 
 .timeline__item {
@@ -121,8 +120,9 @@
   font-size: 18px;
   line-height: 100%;
   display: inline-block;
-  transform: translate(10px, 7px);
-  padding-bottom: 5px;
+  margin-top: 0.7%;
+  padding-left: 1.6%;
+  padding-bottom: 0;
 }
 
 .main-content-text {
@@ -173,21 +173,7 @@
   overflow: hidden;
 }
 
-.card__like-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  transform: translateX(0);
-  transition: transform 0.3s ease;
-}
 
-.card__like-button:hover::before {
-  transform: translateX(100%);
-}
 
 .card__like-button .button__text {
   position: relative;
@@ -200,39 +186,39 @@
   box-shadow: 2px 2px 0 var(--accent-color, #ff0000);
 }
 
-.batons {
+.buttons {
   display: flex;
   flex-direction: row-reverse;
   height: auto;
   padding-bottom: 3.2%;
 }
 
-.timeline__item:nth-child(2) .main-content-image {
+.filter-sepia {
   filter: sepia(85%) saturate(50%);
 }
 
-.timeline__item:nth-child(3) .main-content-image {
+.filter-red {
   filter: hue-rotate(90deg) saturate(300%) contrast(120%) brightness(110%);
 }
 
-.timeline__item:nth-child(4) .main-content-image {
+.filter-brown-green {
   filter: hue-rotate(150deg) saturate(150%);
 }
 
-.timeline__item:nth-child(5) .main-content-image {
+.filter-contast {
   filter: saturate(150%) contrast(520%);
 }
 
-.timeline__item:nth-child(6) .main-content-image {
+.filter-all {
   filter: blur(2px) hue-rotate(200deg) saturate(500%) contrast(250%)
     brightness(150%) invert(20%) sepia(30%);
 }
 
-.timeline__item:nth-child(7) .main-content-image {
+.filter-invert-blur {
   filter: blur(3px) invert(79%);
 }
 
-.timeline__item:nth-child(8) .main-content-image {
+.filter-rotate-contrast {
   filter: hue-rotate(270deg) saturate(350%) contrast(140%) brightness(115%);
 }
 
@@ -240,7 +226,7 @@
   position: absolute;
   top: 4.7%;
   right: 3.8%;
-  opacity: 0.3;
+  opacity: 0.5;
   mix-blend-mode: hard-light;
   color: rgba(0, 0, 0, 1);
   font-family: var(--font-accent);
@@ -283,22 +269,6 @@
   overflow: hidden;
 }
 
-.card__save-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  transform: translateX(0);
-  transition: transform 0.3s ease;
-  z-index: 0;
-}
-
-.card__save-button:hover::before {
-  transform: translateX(100%);
-}
 
 .card__save-button:focus {
   box-shadow: 2px 2px 0 var(--accent-color);
@@ -326,8 +296,6 @@ dialog {
 }
 
 .dialog[open] {
-  height: 19.9%;
-  max-height: 191px;
   max-width: 353px;
   width: 24.51%;
   display: flex;
@@ -339,8 +307,7 @@ dialog {
   justify-content: space-between;
   padding-left: 2.1%;
   padding-top: 0;
-  padding-bottom: 2.1%;
-  overflow-y: hidden;
+  padding-bottom: 0%;
 }
 
 dialog#myDialog::backdrop {
@@ -375,6 +342,8 @@ dialog#myDialog::backdrop {
   border-block-start: 2px solid #000;
   position: relative;
   overflow: hidden;
+  margin-bottom: 2%;
+  margin-top: 3%;
 }
 
 .close-button-text {
@@ -385,22 +354,6 @@ dialog#myDialog::backdrop {
   mix-blend-mode: difference;
 }
 
-.dialog__close-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -105%;
-  width: 105%;
-  height: 100%;
-  background-color: black;
-  transform: translateX(0);
-  transition: transform 0.3s ease;
-  z-index: 0;
-}
-
-.dialog__close-button:hover::before {
-  transform: translateX(100%);
-}
 
 .dialog__close-button:focus {
   box-shadow: 2px 2px 0 var(--accent-color);
@@ -521,6 +474,22 @@ dialog#myDialog::backdrop {
   opacity: 1;
 }
 
+.black-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.black-button:hover::before {
+  transform: translateX(100%);
+}
+
 @media (width <= 376px) {
   .header-title {
     margin-top: 32%;
@@ -557,7 +526,7 @@ dialog#myDialog::backdrop {
   .card__icon-button {
     margin-top: 7%;
   }
-  .batons {
+  .buttons {
     padding-bottom: 5.4%;
   }
   .timeline__item {
