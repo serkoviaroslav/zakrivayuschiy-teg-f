@@ -50,6 +50,7 @@
   vertical-align: bottom;
   text-transform: uppercase;
   margin-top: 18.5%;
+  font-variation-settings: "wght" var(--font-400);
 }
 
 .header-subtitle {
@@ -163,27 +164,19 @@
 }
 
 .card__like-button {
-  background-color: transparent;
   height: 38px;
   width: 130px;
   position: relative;
   margin-right: 3.8%;
   margin-top: 3.6%;
-  border: 2px solid black;
   overflow: hidden;
 }
-
-
 
 .card__like-button .button__text {
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
   color: #ffffff;
-}
-
-.card__like-button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color, #ff0000);
 }
 
 .buttons {
@@ -252,13 +245,8 @@
 }
 
 .card__save-button {
-  background-color: white;
-  border-inline-start: 2px solid #000;
-  border-inline-end: 2px solid #000;
-  border-block-end: 2px solid #000;
-  border-block-start: 2px solid #000;
   height: auto;
-  width: 23.26%;
+  width: calc(var(--content-width)-20%);
   margin: 50px auto 0 auto;
   display: flex;
   flex-direction: row;
@@ -267,11 +255,6 @@
   margin-bottom: 4%;
   position: relative;
   overflow: hidden;
-}
-
-
-.card__save-button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .save-button__text {
@@ -291,13 +274,11 @@
   margin-left: 4%;
 }
 
-dialog {
+.dialog {
   display: none;
 }
 
 .dialog[open] {
-  max-width: 353px;
-  width: calc(var(--content-width)-20%);
   display: flex;
   flex-direction: column;
   border-inline-start: 2px solid #000;
@@ -305,12 +286,14 @@ dialog {
   border-block-end: 2px solid #000;
   border-block-start: 2px solid #000;
   justify-content: space-between;
-  padding-left: 2.1%;
-  padding-top: 0;
-  padding-bottom: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
+  padding: 0;
+  margin: 0;
+  width: 24%;
+  min-width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 dialog#myDialog::backdrop {
@@ -320,10 +303,12 @@ dialog#myDialog::backdrop {
 .dialog-content {
   display: flex;
   flex-direction: row;
-  margin-top: 10%;
-  padding-top: 3%;
+  margin-top: 8.6%;
+  padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 10%;
+  margin-bottom: 8.6%;
+  gap: 20px;
+  margin-left: 8.6%;
 }
 
 .dialog-text {
@@ -333,25 +318,22 @@ dialog#myDialog::backdrop {
   line-height: 150%;
   letter-spacing: 0%;
   text-transform: uppercase;
-  margin-left: 6.3%;
+  margin-left: 0;
   width: 70%;
-  padding-top: 5%;
+  padding-top: 0;
 }
 
 .dialog__close-button {
-  background-color: transparent;
   height: auto;
-  width: 96%;
-  border-inline-start: 2px solid #000;
-  border-inline-end: 2px solid #000;
-  border-block-end: 2px solid #000;
-  border-block-start: 2px solid #000;
   position: relative;
   overflow: hidden;
-  margin-bottom: 5%;
+  margin-bottom: 8.29%;
   margin-top: 0;
-  padding-bottom: 2.6%;
-  padding-top: 2.6%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  padding-block: 2.5%;
+  padding-inline: 37.735%;
 }
 
 .close-button-text {
@@ -360,14 +342,11 @@ dialog#myDialog::backdrop {
   line-height: 90%;
   color: #fff;
   mix-blend-mode: difference;
-  padding: 5% 0 5% 0;
   text-transform: uppercase;
+  line-height: 90%;
+  font-variation-settings: "wght" var(--font-400);
 }
 
-
-.dialog__close-button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color);
-}
 
 .floppy-dialog {
   height: 39px;
@@ -484,7 +463,7 @@ dialog#myDialog::backdrop {
   opacity: 1;
 }
 
-.black-button::before {
+.button-effects::before {
   content: "";
   position: absolute;
   top: 0;
@@ -493,14 +472,33 @@ dialog#myDialog::backdrop {
   height: 100%;
   background-color: black;
   transform: translateX(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
-.black-button:hover::before {
+.button-effects:hover::before {
   transform: translateX(100%);
 }
 
-@media (width <= 376px) {
+.button-effects:focus {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.button-effects {
+  border-inline-start: 2px solid #000;
+  border-inline-end: 2px solid #000;
+  border-block-end: 2px solid #000;
+  border-block-start: 2px solid #000;
+  background-color: white;
+}
+
+.card__like-button:focus,
+.card__icon-button:focus,
+.card__save-button:focus,
+.dialog__close-button:focus {
+  outline: none;
+}
+
+@media (width <= 756px) {
   .header-title {
     margin-top: 32%;
   }
@@ -515,7 +513,6 @@ dialog#myDialog::backdrop {
     letter-spacing: 0%;
     vertical-align: middle;
     line-height: 1.2;
-    transform: translate(10px, 5px);
     padding-bottom: 4px;
   }
   .label {
@@ -560,20 +557,14 @@ dialog#myDialog::backdrop {
     margin-right: 4%;
   }
   .dialog[open] {
-    height: 30%;
-    max-height: 191px;
-    max-width: 341px;
-    width: 90.51%;
     justify-content: center;
     gap: 15%;
+    min-width: none;
   }
   .dialog__close-button {
-    width: 83.5%;
-    height: 21.15%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-inline: 34.724%;
   }
   .dialog-content {
-    margin-left: 8%;
+    margin-left: 11.97%;
   }
 }
