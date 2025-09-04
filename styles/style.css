@@ -339,7 +339,6 @@ dialog#myDialog::backdrop {
 .close-button-text {
   font-family: var(--font-accent);
   font-size: 14px;
-  line-height: 90%;
   color: #fff;
   mix-blend-mode: difference;
   text-transform: uppercase;
