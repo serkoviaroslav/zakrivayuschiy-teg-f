@@ -1,16 +1,20 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --font-main: "Inter", sans-serif;
-    --font-accent: "PressStart2P", cursive;
-    --page-bg: 
-        repeating-linear-gradient( 90deg, #d3d3d3 0 2px,transparent 2px 4px),
-        repeating-linear-gradient(0deg, #d3d3d3 0 2px, transparent 2px 4px),
-        linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
-    --content-width: clamp(375px, 49%, 1440px);
-    --contour-color: black;
-    --animation-fill-color: red;
-    --accent-color: black;
-    --anti-accent-color: white;
-    --font-400: 400;
-    --font-410: 410;
+  --font-main: "Inter", sans-serif;
+  --font-accent: "PressStart2P", cursive;
+  --page-bg: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(0deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  --content-width: clamp(375px, 49%, 1440px);
+  --contour-color: black;
+  --animation-fill-color: red;
+  --accent-color: black;
+  --anti-accent-color: white;
+  --font-wght-elements: 400;
+  --font-wght-paragraf-main: 410;
+  --font-wght-title-main: 715;
 }
