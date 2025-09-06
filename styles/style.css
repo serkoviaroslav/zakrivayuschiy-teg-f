@@ -458,9 +458,6 @@ dialog#myDialog::backdrop {
   opacity: 1;
 }
 
-.card__icon-button:focus::after {
-  opacity: 1;
-}
 
 .button-effects::before {
   content: "";
